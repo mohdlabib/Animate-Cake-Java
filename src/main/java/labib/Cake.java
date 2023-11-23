@@ -90,7 +90,7 @@ public class Cake extends JPanel implements ActionListener {
 
         Graphics2D g2 = (Graphics2D) g;
 
-        g2.drawImage(bgImage, Frame.LEBAR / 2 - bgImage.getWidth(null) + 600, 0, null);
+        g2.drawImage(bgImage, Frame.LEBAR / 2 - bgImage.getWidth(null) + 510, 0, null);
 
         g2.drawImage(table, -75, Frame.TINGGI - table.getHeight(null) + 120, null);
 
