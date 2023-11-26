@@ -1,5 +1,6 @@
 package labib;
 
+import java.awt.Image;
 import java.io.File;
 
 import javax.sound.sampled.AudioInputStream;
@@ -10,6 +11,7 @@ import javax.swing.*;
 public class Frame extends JFrame {
 
     public static int LEBAR = 600, TINGGI = 750;
+    Image[] animateCutImages;
     
     public Frame() {
         super();
@@ -19,7 +21,14 @@ public class Frame extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
 
-        add(new Cake());
+        animateCutImages = new Image[289];
+
+        for(int i=0; i< animateCutImages.length;i++) {
+            animateCutImages[i] = new ImageIcon("resources/animasi/animasi"+i+".jpg").getImage();
+            // animateCutImages[i] = animateCutImages[i].getScaledInstance(400, 400, Image.SCALE_SMOOTH);
+        }
+
+        add(new Cake(animateCutImages));
 
         pack();
 
