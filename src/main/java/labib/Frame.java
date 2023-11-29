@@ -25,13 +25,11 @@ public class Frame extends JFrame {
 
         for(int i=0; i< animateCutImages.length;i++) {
             animateCutImages[i] = new ImageIcon("resources/animasi/animasi"+i+".jpg").getImage();
-            // animateCutImages[i] = animateCutImages[i].getScaledInstance(400, 400, Image.SCALE_SMOOTH);
         }
 
         add(new Cake(animateCutImages));
 
         pack();
-
         playMusic("resources/sound.wav");
     }
 
